@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # You can freely adopt this number to print pyramids of different sizes
-h = 2
+h = 1
 
 
 # build a string 
