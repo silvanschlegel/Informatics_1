@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import analyze
+from script import analyze
 
 # This test suite does not exhaustively test the implementation,
 # a passing "test & run" does not mean that all possible cases
@@ -17,6 +17,14 @@ class PublicTestSuite(TestCase):
     def test_1(self):
         actual = analyze(["hi #weekend",
                           "good morning #zurich #limmat",
+                          "spend my #weekend in #zurich",
+                          "#zurich <3"])
+        expected = {'weekend': 2, 'zurich': 3, 'limmat': 1}
+        self.assertEqual(expected, actual)
+
+    def test_1(self):
+        actual = analyze(["hi #weekend",
+                          "good # morning #zurich #limmat #1hello",
                           "spend my #weekend in #zurich",
                           "#zurich <3"])
         expected = {'weekend': 2, 'zurich': 3, 'limmat': 1}
