@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from public import script
+import script
 
 # This test suite only tests whether the given two numbers are
 # friendly pair or not. It uses the numbers 6 and 28, 
@@ -19,3 +19,17 @@ class PublicTestSuite(TestCase):
         actual = script.isFriendlyPair()
         message = "@@{} and {} wrongly detected as not friendly pair even though they are.@@".format(script.num1, script.num2)
         self.assertTrue(actual, message)  
+
+    def test_checkFriendly_1(self):
+        script.num1 = 24
+        script.num2 = 91963648
+        actual = script.isFriendlyPair()
+        message = "@@{} and {} wrongly detected as not friendly pair even though they are.@@".format(script.num1, script.num2)
+        self.assertTrue(actual, message)
+
+    def test_checkFriendly_2(self):
+        script.num1 = 66
+        script.num2 = 308
+        actual = script.isFriendlyPair()
+        message = "@@{} and {} wrongly detected as not friendly pair even though they are.@@".format(script.num1, script.num2)
+        self.assertTrue(actual, message)
