@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import compress
+from script import compress
 
 # This test suite does not exhaustively test the implementation,
 # a passing "test & run" does not mean that all possible cases
@@ -25,4 +25,22 @@ class PublicTestSuite(TestCase):
                 (9, 8, 7)
             ]
         )
+        self.assertEqual(expected, actual)
+
+    def test_2(self):
+        actual = compress([
+            {},
+            {}
+        ])
+        expected = (
+            (),
+            [
+                ()
+            ]
+        )
+        self.assertEqual(expected, actual)
+
+    def test_3(self):
+        actual = compress([])
+        expected = ((),[])
         self.assertEqual(expected, actual)
