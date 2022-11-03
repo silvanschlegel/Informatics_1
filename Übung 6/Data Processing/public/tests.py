@@ -4,8 +4,8 @@ from unittest import TestCase
 from script import process_data
 import os
 
-INPUT_FILE = "public/my_data.txt"
-OUTPUT_FILE = "public/my_data_processed.txt"
+INPUT_FILE = "my_data.txt"
+OUTPUT_FILE = "my_data_processed.txt"
 
 class PublicTestSuite(TestCase):
 
@@ -25,7 +25,7 @@ class PublicTestSuite(TestCase):
             self.fail("No output file exists")
 
     def test_non_existing_file(self):
-        actual = process_data("public/non_existing_file.txt", OUTPUT_FILE)
+        actual = process_data("non_existing_file.txt", OUTPUT_FILE)
         expected = False
         self.assertEqual(expected, actual)
 
