@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public import script
+import script
 
 # This test suite does not exhaustively test the implementation,
 # a passing "test & run" does not mean that all possible cases
