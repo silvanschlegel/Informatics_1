@@ -19,7 +19,6 @@ def get_possible_nrs(n):
             if i == 8:
                 poss_nr = nr_string + str(j)
             else:
-
                 poss_nr = nr_string[:i] + str(j) + nr_string[i:]
 
             all_nrs.add(poss_nr)
