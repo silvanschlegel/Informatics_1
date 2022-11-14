@@ -52,43 +52,63 @@ def convert_roman_to_int(roman):
         "MD": 1500,
         "MM": 2000
     }
-    roman_unallowed = ["IIMX", "IVII", "IVIV", "IXIX", "VIIII", "VV", "DD", "LL", "LLX", "XXXX", "IIII", "VIV", "DCCCC", "IVI", "IXI", "ILI", "ICI", "IDI", "IMI", "XLX", "XCX", "XDX", "XMX", "LDL", "LML", "CDC", "CMC", "IL", "IC", "ID", "IM", "VX", "VL", "VC", "VD", "VM", "LC", "LD", "LM", "DM", "IVX", "IVL", "IVC", "IVD", "IVM", "IXL", "IXL", "IXC", "IXD", "IXM", "XLC", "XLD", "XLM", "CDM"]
+    roman_unallowed = ["IIMX", "IVII", "IVIV", "IXIX", "VIIII", "VV", "DD", "LL", "LLX", "VIV", "XXXX", "IIII", "DCCCC",
+                       "IVI", "IXI", "ILI", "ICI", "IDI", "IMI", "XLX", "XCX", "XDX", "XMX", "LDL", "LML", "CDC", "CMC",
+                       "IL", "IC", "ID", "IM", "VX", "VL", "VC", "VD", "VM", "LC", "LD", "LM", "DM", "IVX", "IVL",
+                       "IVC", "IVD", "IVM", "IXL", "IXL", "IXC", "IXD", "IXM", "XLC", "XLD", "XLM", "CDM"]
     num = 0
-    #check if some unallowed sequence is in roman
     for k in roman_unallowed:
         if k in roman:
             raise Warning("Invalid Input")
-    i = len(roman) - 1
-    if i - 1 >= 0:
-        if roman[i - 1] + roman[i] in roman_double_digits.keys():
-            num += roman_double_digits[roman[i - 1] + roman[i]]
-            if i - 2 >= 0:
-                if roman[i - 2] + roman[i - 1] in roman_allowed_tuples.keys():
-                    num += convert_roman_to_int(roman[:len(roman) - 2])
-                else:
-                    raise Warning("Invalid Input")
-
-        elif roman[i] in roman_single_digits.keys():
-            num += roman_single_digits[roman[i]]
-            if i > 0:
-                if roman[i - 1] + roman[i] in roman_allowed_tuples.keys():
-                    num += convert_roman_to_int(roman[:len(roman) - 1])
-
+    i = 0
+    temp = 0
+    if i + 1 <= (len(roman) - 1):
+        if roman[i] + roman[i + 1] in roman_double_digits.keys():
+            temp = roman_double_digits[roman[i]+roman[i+1]]+1
         else:
-            raise Warning("Invalid Input")
-
+            temp = roman_single_digits[roman[i]]+1
     else:
-        if roman[i] in roman_single_digits.keys():
-            num += roman_single_digits[roman[i]]
-            if i < 0:
-                convert_roman_to_int(roman[:len(roman) - 1])
+        temp = roman_single_digits[roman[i]]+1
+
+    while i< len(roman):
+        if i+1 <= (len(roman)-1):
+            if roman[i]+roman[i+1] in roman_double_digits.keys() and roman_double_digits[roman[i]+roman[i+1]] < temp:
+                num += roman_double_digits[roman[i]+roman[i+1]]
+                temp = roman_double_digits[roman[i]+roman[i+1]]
+                if i+1 < (len(roman)-1):
+                    if roman[i+1]+roman[i+2] in roman_allowed_tuples.keys():
+                        i += 2
+                    else:
+                        raise Warning("Invalid Input")
+                else:
+                    i+=2
+
+            elif roman[i] in roman_single_digits.keys() and roman_single_digits[roman[i]] <= temp:
+                num += roman_single_digits[roman[i]]
+                temp = roman_single_digits[roman[i]]
+                if i < len(roman)-1:
+                    if roman[i] + roman[i+1] in roman_allowed_tuples.keys():
+                        i += 1
+                    else:
+                        raise Warning("Invalid Input")
+
+            else:
+                raise Warning("Invalid Input")
+
         else:
-            raise Warning("Invalid Input")
+            if roman[i] in roman_single_digits.keys() and roman_single_digits[roman[i]] <= temp:
+                num += roman_single_digits[roman[i]]
+                temp = roman_single_digits[roman[i]]
+                if i < len(roman):
+                    i += 1
+            else:
+                raise Warning("Invalid Input")
 
     return num
 
 
+
 # The following lines calls the function and prints the return
 # value to the Console.
-i = convert_roman_to_int("XIV")
+i = convert_roman_to_int("XX")
 print(i)
