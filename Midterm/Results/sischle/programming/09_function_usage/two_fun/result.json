@@ -1,0 +1,13 @@
+{
+    "user": "sischle",
+    "title": "Functions (2)",
+    "passed": 2,
+    "failed": 1,
+    "points_attainable": 6,
+    "messages": [
+        "If f1 and f2 are both lambda x: x, the result equals value ... ok",
+        "The function contains exactly two function calls ... FAIL",
+        "Correct result for example calls ... ok"
+    ],
+    "points_achieved": 4
+}

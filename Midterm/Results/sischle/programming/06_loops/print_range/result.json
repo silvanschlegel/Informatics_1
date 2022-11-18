@@ -1,0 +1,15 @@
+{
+    "user": "sischle",
+    "title": "Loops",
+    "passed": 5,
+    "failed": 0,
+    "points_attainable": 5,
+    "messages": [
+        "1 step prints 1 line ... ok",
+        "Starting with a negative number works correctly ... ok",
+        "Function returns None (and doesn't just pass) ... ok",
+        "Call with equal start and stop doesn't print anything ... ok",
+        "Implementation uses a while loop ... ok"
+    ],
+    "points_achieved": 5
+}

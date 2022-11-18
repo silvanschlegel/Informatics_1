@@ -1,0 +1,17 @@
+{
+    "user": "sischle",
+    "title": "Riddle me this!",
+    "passed": 0,
+    "failed": 7,
+    "points_attainable": 21,
+    "messages": [
+        "Correct result for a game with 5 digits ... ERROR",
+        "Based on returned numbers, matches with guess are correct ... ERROR",
+        "Returned numbers are in ascending order ... ERROR",
+        "Length of generated numbers matches length of guess ... ERROR",
+        "Returned numbers contain no duplicates ... ERROR",
+        "Based on returned matches, payout is correct ... ERROR",
+        "Correct result for a single number and no matches ... ERROR"
+    ],
+    "points_achieved": 0
+}

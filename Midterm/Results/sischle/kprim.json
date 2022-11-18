@@ -1,0 +1,71 @@
+[
+    {
+        "task_name": "Evaluate this!",
+        "points_achieved": 0,
+        "points_attainable": 2,
+        "question": [
+            "This expression evaluates as None: <code>print(1)</code>",
+            "This expression evaluates as None: <code>(lambda x: None)(True)</code>",
+            "This expression evaluates as None: <code>'None' == None</code>",
+            "This expression evaluates as None: <code>None</code>"
+        ],
+        "given_answer": [
+            false,
+            false,
+            false,
+            true
+        ],
+        "correct_answer": [
+            true,
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "task_name": "Conditionals / Loops",
+        "points_achieved": 1.0,
+        "points_attainable": 2,
+        "question": [
+            "A <code>while</code> loop may never stop.",
+            "A <code>for</code> loop will always execute at least once.",
+            "<code>while</code> loops inherently have a higher chance of problematic behavior than <code>for</code> loops.",
+            "Every <code>x</code> in <code>for x in enumerate(range(10))</code> is a tuple."
+        ],
+        "given_answer": [
+            true,
+            false,
+            true,
+            false
+        ],
+        "correct_answer": [
+            true,
+            false,
+            true,
+            true
+        ]
+    },
+    {
+        "task_name": "Functions",
+        "points_achieved": 2,
+        "points_attainable": 2,
+        "question": [
+            "Every function has a return value.",
+            "Any function accepts at least one parameter.",
+            "Functions cannot have optional parameters.",
+            "Functions enable decomposition."
+        ],
+        "given_answer": [
+            true,
+            false,
+            false,
+            true
+        ],
+        "correct_answer": [
+            true,
+            false,
+            false,
+            true
+        ]
+    }
+]

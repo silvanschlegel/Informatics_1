@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en"><h1>Your total score: 27.0 / 60</h1><h2>Note</h2>
+<p>Visit the OLAT forum and read the sticky thread for more information. It describes how the exam results and review files are to be interpreted.</p>
+<p>If you have questions, be sure that your message adheres to the specifications for appeals and questions outlined in the forum post.</p><br><hr><br><h2>Evaluate this!</h2>
+<p>Decide for each of the following statements whether it is true or false. You will receive full points if all your choices are correct, half points if 3 chocies are correct, and no points otherwise.</p>
+<ul>
+<li><span>This expression evaluates as None: <code>print(1)</code></span><br><span>Correct answer: True.</span><br><span>Your answer: False.</span></li><li><span>This expression evaluates as None: <code>(lambda x: None)(True)</code></span><br><span>Correct answer: True.</span><br><span>Your answer: False.</span></li><li><span>This expression evaluates as None: <code>'None' == None</code></span><br><span>Correct answer: False.</span><br><span>Your answer: False.</span></li><li><span>This expression evaluates as None: <code>None</code></span><br><span>Correct answer: True.</span><br><span>Your answer: True.</span></li></ul>
+
+<h4>Your score: 0 / 2</h4><br><hr><br><h2>Conditionals / Loops</h2>
+<p>Decide for each of the following statements whether it is true or false. You will receive full points if all your choices are correct, half points if 3 chocies are correct, and no points otherwise.</p>
+<ul>
+<li><span>A <code>while</code> loop may never stop.</span><br><span>Correct answer: True.</span><br><span>Your answer: True.</span></li><li><span>A <code>for</code> loop will always execute at least once.</span><br><span>Correct answer: False.</span><br><span>Your answer: False.</span></li><li><span><code>while</code> loops inherently have a higher chance of problematic behavior than <code>for</code> loops.</span><br><span>Correct answer: True.</span><br><span>Your answer: True.</span></li><li><span>Every <code>x</code> in <code>for x in enumerate(range(10))</code> is a tuple.</span><br><span>Correct answer: True.</span><br><span>Your answer: False.</span></li></ul>
+
+<h4>Your score: 1.0 / 2</h4><br><hr><br><h2>Functions</h2>
+<p>Decide for each of the following statements whether it is true or false. You will receive full points if all your choices are correct, half points if 3 chocies are correct, and no points otherwise.</p>
+<ul>
+<li><span>Every function has a return value.</span><br><span>Correct answer: True.</span><br><span>Your answer: True.</span></li><li><span>Any function accepts at least one parameter.</span><br><span>Correct answer: False.</span><br><span>Your answer: False.</span></li><li><span>Functions cannot have optional parameters.</span><br><span>Correct answer: False.</span><br><span>Your answer: False.</span></li><li><span>Functions enable decomposition.</span><br><span>Correct answer: True.</span><br><span>Your answer: True.</span></li></ul>
+
+<h4>Your score: 2 / 2</h4><br><hr><br><h2>If / Elif / Else</h2>
+<p>Implement a function <code>check</code> which takes two non-negative integers as parameters <code>speed</code> and <code>limit</code>. If <code>speed</code> is greater than <code>limit</code>, the function should return <code>False</code>, otherwise it should return <code>True</code>. However, if <code>limit</code> is <code>0</code>, the function should return <code>True</code> whatever the value of <code>speed</code>.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">check</span>(speed, limit):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( check(<span style="color: #666666">130</span>, <span style="color: #666666">90</span>) )
+<span style="color: #008000">print</span>( check(<span style="color: #666666">170</span>, <span style="color: #666666">0</span>) )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>False
+True
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">check</span>(speed, limit):
+    <span style="color: #008000; font-weight: bold">if</span> limit <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">True</span>
+    <span style="color: #008000; font-weight: bold">if</span> speed <span style="color: #666666">&gt;</span> limit:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">False</span>
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">True</span>
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( check(<span style="color: #666666">130</span>, <span style="color: #666666">90</span>) )
+<span style="color: #008000">print</span>( check(<span style="color: #666666">170</span>, <span style="color: #666666">0</span>) )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">check</span>(speed, limit):
+    <span style="color: #008000; font-weight: bold">if</span> limit <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">True</span>
+    <span style="color: #008000; font-weight: bold">if</span> speed <span style="color: #666666">&gt;</span> limit:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">False</span>
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">True</span>
+</pre></div>
+
+<h4>Test results:</h4><ul><li>Speed below limit returning True ... ok</li><li>Speed over limit returning False ... ok</li><li>Speed just 1 over limit returning False ... ok</li><li>Speed equals limit returning True ... ok</li><li>Limit 0 returning True ... ok</li><li>Speed 0 returning True ... ok</li></ul><h4>Your score: 3.0 / 3</h4><br><hr><br><h2>Déjà vu</h2>
+<p>Implement a function <code>sum_divisibles</code> which takes two parameters, a positive integer <code>divisor</code> and a non-negative integer <code>limit</code>. The function should compute the sum of all values from <code>0</code> up to and including <code>limit</code> which are divisible by <code>divisor</code>.</p>
+<p>For example, given a <code>limit</code> of <code>17</code> and a <code>divisor</code> of <code>4</code>, the return value should be <code>40</code> (which results from <code>4 + 8 + 12 + 16</code>).</p>
+<p>You may assume that your function will only be called with non-negative integers.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">sum_divisibles</span>(limit, divisor):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( sum_divisibles(<span style="color: #666666">5</span>, <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( sum_divisibles(<span style="color: #666666">11</span>, <span style="color: #666666">5</span>) )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>6
+15
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">sum_divisibles</span>(limit, divisor):
+    res <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    <span style="color: #008000; font-weight: bold">for</span> n <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(limit<span style="color: #666666">+1</span>):
+        <span style="color: #008000; font-weight: bold">if</span> n <span style="color: #666666">%</span> divisor <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+            res <span style="color: #666666">+=</span> n
+    <span style="color: #008000; font-weight: bold">return</span> res
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( sum_divisibles(<span style="color: #666666">5</span>, <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( sum_divisibles(<span style="color: #666666">11</span>, <span style="color: #666666">5</span>) )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">sum_divisibles</span>(limit, divisor):
+    <span style="color: #008000">sum</span> <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(limit<span style="color: #666666">+1</span>):
+        <span style="color: #008000; font-weight: bold">if</span> i<span style="color: #666666">%</span>divisor <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+            <span style="color: #008000">sum</span> <span style="color: #666666">+=</span> i
+
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">sum</span>
+</pre></div>
+
+<h4>Test results:</h4><ul><li>Correct result for limit 1 and divisor 1 ... ok</li><li>Correct result for divisor 1 ... ok</li><li>Correct result if divisor == limit ... ok</li><li>Correct result if divisor > limit ... ok</li><li>Correct result for large limit ... ok</li><li>Correct result for limit 0 ... ok</li></ul><h4>Your score: 6 / 6</h4><br><hr><br><h2>Loops</h2>
+<p>Implement a function <code>print_range</code> which takes three numbers as parameters <code>start</code>, <code>stop</code> and <code>step</code>. The function should <em>print</em> numbers beginning at <code>start</code> in increments of <code>step</code> up to (but not including) <code>stop</code>, one number per line. You can assume that <code>start</code> will never be larger than <code>stop</code> and that <code>step</code> is always positive. Note that this function does not return anything.</p>
+<p>Important: even though there are various ways to solve this task, you <strong>must</strong> use a while loop to solve this problem and you may not use <code>range()</code>.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_range</span>(start, stop, step):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( print_range(<span style="color: #666666">0</span>, <span style="color: #666666">5</span>, <span style="color: #666666">1</span>) )
+<span style="color: #008000">print</span>( print_range(<span style="color: #666666">5</span>, <span style="color: #666666">20</span>, <span style="color: #666666">3</span>) )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>0
+1
+2
+3
+4
+None
+5
+8
+11
+14
+17
+None
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_range</span>(start, stop, step):
+    current <span style="color: #666666">=</span> start
+    <span style="color: #008000; font-weight: bold">while</span> current <span style="color: #666666">&lt;</span> stop:
+        <span style="color: #008000">print</span>(current)
+        current <span style="color: #666666">+=</span> step
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( print_range(<span style="color: #666666">0</span>, <span style="color: #666666">5</span>, <span style="color: #666666">1</span>) )
+<span style="color: #008000">print</span>( print_range(<span style="color: #666666">5</span>, <span style="color: #666666">20</span>, <span style="color: #666666">3</span>) )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_range</span>(start, stop, step):
+    i <span style="color: #666666">=</span> start
+    <span style="color: #008000; font-weight: bold">while</span> i <span style="color: #666666">&lt;</span> stop:
+        <span style="color: #008000">print</span>(i)
+        i <span style="color: #666666">+=</span> step
+</pre></div>
+
+<h4>Test results:</h4><ul><li>1 step prints 1 line ... ok</li><li>Starting with a negative number works correctly ... ok</li><li>Function returns None (and doesn't just pass) ... ok</li><li>Call with equal start and stop doesn't print anything ... ok</li><li>Implementation uses a while loop ... ok</li></ul><h4>Your score: 5 / 5</h4><br><hr><br><h2>Functions (1)</h2>
+<p>Implement a function <code>add</code> which can take two numbers as parameters <code>a</code> and <code>b</code>. Both parameters are optional and shall be <code>0</code> by default. The function should return the sum of  <code>a</code> and <code>b</code>.</p>
+<p><strong>Important</strong>: In this task, you must write the function signature yourself. Make sure that your function is called <code>add</code>.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #666666">...</span> <span style="color: #3D7B7B; font-style: italic"># Write the function signature and implement the function</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( add(<span style="color: #666666">2</span>, <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( add() )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>4
+0
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">add</span>(a<span style="color: #666666">=0</span>, b<span style="color: #666666">=0</span>):
+    <span style="color: #008000; font-weight: bold">return</span> a<span style="color: #666666">+</span>b
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( add(<span style="color: #666666">2</span>, <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( add() )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">add</span>(a <span style="color: #666666">=</span> <span style="color: #666666">0</span>,b <span style="color: #666666">=</span> <span style="color: #666666">0</span>):
+
+    <span style="color: #008000; font-weight: bold">return</span> a<span style="color: #666666">+</span>b
+</pre></div>
+
+<h4>Test results:</h4><ul><li>Correct result if supplying value for only a or both a and b ... ok</li><li>Correct result when calling function without parameters ... ok</li><li>Function signature specifies two parameters ... ok</li></ul><h4>Your score: 6 / 6</h4><br><hr><br><h2>Data structures</h2>
+<p>Implement a function <code>remove_every</code> which takes two parameters: a list <code>l</code>(containing arbitrary values) and a positive integer <code>n</code>.  The function should return a list containing the elements from <code>l</code> but with every <code>n</code>'th element removed. For example, if <code>n</code> is 3, every third element should be removed.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">remove_every</span>(l, n):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( remove_every([<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>, <span style="color: #666666">4</span>, <span style="color: #666666">5</span>], <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( remove_every([<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>, <span style="color: #666666">4</span>, <span style="color: #666666">5</span>, <span style="color: #666666">4</span>, <span style="color: #666666">3</span>, <span style="color: #666666">2</span>, <span style="color: #666666">1</span>], <span style="color: #666666">3</span>) )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>[1, 3, 5]
+[1, 2, 4, 5, 3, 2]
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">remove_every</span>(l, n):
+    res <span style="color: #666666">=</span> []
+    <span style="color: #008000; font-weight: bold">for</span> i, item <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(l):
+        <span style="color: #008000; font-weight: bold">if</span> (i<span style="color: #666666">+1</span>) <span style="color: #666666">%</span> n <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+            <span style="color: #008000; font-weight: bold">continue</span>
+        res<span style="color: #666666">.</span>append(item)
+    <span style="color: #008000; font-weight: bold">return</span> res
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( remove_every([<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>, <span style="color: #666666">4</span>, <span style="color: #666666">5</span>], <span style="color: #666666">2</span>) )
+<span style="color: #008000">print</span>( remove_every([<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>, <span style="color: #666666">4</span>, <span style="color: #666666">5</span>, <span style="color: #666666">4</span>, <span style="color: #666666">3</span>, <span style="color: #666666">2</span>, <span style="color: #666666">1</span>], <span style="color: #666666">3</span>) )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic"># Submission was empty</span>
+</pre></div>
+
+<h4>Test results:</h4><ul><li>Correct result for empty l ... ERROR</li><li>Correct result if list values are of mixed types ... ERROR</li><li>Correct result for n = 1 ... ERROR</li><li>Correct result for n = 10 ... ERROR</li><li>Correct result for n = 2 ... ERROR</li><li>Correct result if n > len(l) ... ERROR</li><li>Correct result if list values are strings ... ERROR</li></ul><h4>Your score: 0 / 7</h4><br><hr><br><h2>Functions (2)</h2>
+<p>Implement a function <code>apply</code> which takes three parameters: a function <code>f1</code>, a function <code>f2</code>, and a value <code>value</code>. These parameters will always be chosen such that the function <code>f1</code> takes one parameter of the same type as <code>value</code> and <code>f2</code> will take one parameter of whatever type the return value of <code>f1</code> will be.</p>
+<p>The function <code>apply</code> should do the following:</p>
+<ul>
+<li>Call <code>f1</code> with <code>value</code> as the parameter, which will result in some return value</li>
+<li>Call <code>f2</code> with the return value of the previous call as the parameter, which will result in another value</li>
+<li>Return the resulting value</li>
+</ul>
+<p>For example, calling <code>apply(min, chr, [101, 97, 99])</code> should first call <code>min</code> with <code>[101, 97, 99]</code> as the parameter, which will result in <code>97</code>. Then, <code>chr</code> should be called with <code>97</code> as the parameter, resulting in <code>a</code>, which shall be returned.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">apply</span>(f1, f2, value):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( apply(<span style="color: #008000">min</span>, <span style="color: #008000">chr</span>, [<span style="color: #666666">101</span>, <span style="color: #666666">97</span>, <span style="color: #666666">99</span>]) )
+<span style="color: #008000">print</span>( apply(<span style="color: #008000">max</span>, <span style="color: #008000; font-weight: bold">lambda</span> x: x<span style="color: #666666">*2</span>, [<span style="color: #666666">2</span>, <span style="color: #666666">50</span>, <span style="color: #666666">3</span>]) )
+<span style="color: #008000">print</span>( apply(<span style="color: #008000">sorted</span>, <span style="color: #008000; font-weight: bold">lambda</span> s: s[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>upper(), <span style="color: #BA2121">&quot;what&quot;</span>) )
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>a
+100
+A
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">apply</span>(f1, f2, value):
+    <span style="color: #008000; font-weight: bold">return</span> f2(f1(value))
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( apply(<span style="color: #008000">min</span>, <span style="color: #008000">chr</span>, [<span style="color: #666666">101</span>, <span style="color: #666666">97</span>, <span style="color: #666666">99</span>]) )
+<span style="color: #008000">print</span>( apply(<span style="color: #008000">max</span>, <span style="color: #008000; font-weight: bold">lambda</span> x: x<span style="color: #666666">*2</span>, [<span style="color: #666666">2</span>, <span style="color: #666666">50</span>, <span style="color: #666666">3</span>]) )
+<span style="color: #008000">print</span>( apply(<span style="color: #008000">sorted</span>, <span style="color: #008000; font-weight: bold">lambda</span> s: s[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>upper(), <span style="color: #BA2121">&quot;what&quot;</span>) )
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">apply</span>(f1, f2, value):
+    f1(value)
+    <span style="color: #008000; font-weight: bold">return</span> f2(f1(value))
+</pre></div>
+
+<h4>Test results:</h4><ul><li>If f1 and f2 are both lambda x: x, the result equals value ... ok</li><li>The function contains exactly two function calls ... FAIL</li><li>Correct result for example calls ... ok</li></ul><h4>Your score: 4 / 6</h4><br><hr><br><h2>Riddle me this!</h2>
+<p>You have been tasked with programming a simulator for number lotteries.</p>
+<p>Implement a function <code>lottery</code> according to these implementation instructions:</p>
+<ul>
+<li>
+<p><code>lottery</code> takes three parameters:</p>
+<ul>
+<li>an integer <code>limit</code> specifying the largest number that can be drawn in this lottery</li>
+<li>a list <code>guess</code> of <em>n</em> unique integer numbers between 1 and (including) <code>limit</code>; this is the guess provided by the player. <em>n</em> will always be larger than 0</li>
+<li>a number <code>prize</code> indicating the maximum amount that can be won in the lottery</li>
+</ul>
+</li>
+<li>
+<p><code>lottery</code> shall then perform the following procedure:</p>
+<ul>
+<li>draw <em>n</em> unique random numbers in the range from (and including) 1 to (and including) <em>limit</em>. <em>n</em> is implied by the length of the guess provided by the player.</li>
+<li>check how many numbers in <code>guess</code> appear in the random draw</li>
+<li>calculate the payout according to the following rule: For an exact match, the whole prize is paid out. If one number differs, half of the prize is paid out. If two numbers differ, a quarter of the prize is paid out, and so on. If none of the numbers match, the prize money is <code>0</code>.</li>
+</ul>
+</li>
+<li>
+<p>In the end <code>lottery</code> should return three values: the randomly generated numbers in ascending order, the number of matches, and the payout.</p>
+</li>
+</ul>
+<p><strong>Note</strong>: Make sure you return the correct number of return values. Partial points are awarded even if not all return values are correct, but only if all three values are present.</p>
+<p>You may assume that your function will only be called with parameters that match the given description.</p>
+<p>Use the following template:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">random</span>
+<span style="color: #3D7B7B; font-style: italic"># this line of code makes it so that calls to random always produce the same</span>
+<span style="color: #3D7B7B; font-style: italic"># successive values so that the examples below always produce the same results</span>
+random<span style="color: #666666">.</span>seed(<span style="color: #666666">7</span>)
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lottery</span>(limit, guess, prize):
+    <span style="color: #008000; font-weight: bold">pass</span> <span style="color: #3D7B7B; font-style: italic"># implement here</span>
+</pre></div>
+
+<p>The following example illustrates how the solution function may be called:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000">print</span>( lottery(<span style="color: #666666">52</span>, [<span style="color: #666666">4</span>, <span style="color: #666666">8</span>, <span style="color: #666666">15</span>, <span style="color: #666666">16</span>, <span style="color: #666666">23</span>, <span style="color: #666666">42</span>], <span style="color: #666666">1000000</span>) ) <span style="color: #3D7B7B; font-style: italic"># 2 matching</span>
+<span style="color: #008000">print</span>( lottery(<span style="color: #666666">3</span>, [<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>], <span style="color: #666666">1000000</span>) )               <span style="color: #3D7B7B; font-style: italic"># inevitable perfect match</span>
+<span style="color: #008000">print</span>( lottery(<span style="color: #666666">10000</span>, [<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>], <span style="color: #666666">1000000</span>) )           <span style="color: #3D7B7B; font-style: italic"># zero matching</span>
+</pre></div>
+
+<p>The calls above should produce the following output:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>([4, 5, 10, 21, 26, 42], 2, 62500.0)
+([1, 2, 3], 3, 1000000)
+([951, 8314, 9549], 0, 0)
+</pre></div>
+
+<h4>Sample solution:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">#!/usr/bin/env</span>
+
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">random</span>
+<span style="color: #3D7B7B; font-style: italic"># this line of code makes it so that calls to random always produce the same</span>
+<span style="color: #3D7B7B; font-style: italic"># successive values so that the examples below always produce the same results</span>
+random<span style="color: #666666">.</span>seed(<span style="color: #666666">7</span>)
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lottery</span>(limit, guess, prize):
+    match <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    numbers <span style="color: #666666">=</span> []
+    <span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">len</span>(numbers) <span style="color: #666666">&lt;</span> <span style="color: #008000">len</span>(guess):
+        n <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #666666">1</span>, limit)
+        <span style="color: #008000; font-weight: bold">if</span> n <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #AA22FF; font-weight: bold">in</span> numbers:
+            numbers<span style="color: #666666">.</span>append(n)
+    <span style="color: #008000; font-weight: bold">for</span> number <span style="color: #AA22FF; font-weight: bold">in</span> guess:
+        <span style="color: #008000; font-weight: bold">if</span> number <span style="color: #AA22FF; font-weight: bold">in</span> numbers:
+            <span style="color: #008000; font-weight: bold">match</span> <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
+    payout <span style="color: #666666">=</span> prize
+    <span style="color: #008000; font-weight: bold">for</span> n <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #008000">len</span>(numbers) <span style="color: #666666">-</span> match):
+        payout <span style="color: #666666">/=</span> <span style="color: #666666">2</span>
+    <span style="color: #008000; font-weight: bold">if</span> match <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+        payout <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    numbers<span style="color: #666666">.</span>sort()
+    <span style="color: #008000; font-weight: bold">return</span> numbers, match, payout
+
+    <span style="color: #3D7B7B; font-style: italic"># or if you already know Python:</span>
+    <span style="color: #3D7B7B; font-style: italic">#numbers = sorted(random.sample(range(1, limit+1), k=len(guess)))</span>
+    <span style="color: #3D7B7B; font-style: italic">#match = len(set(numbers) &amp; set(guess))</span>
+    <span style="color: #3D7B7B; font-style: italic">#payout = 0 if not match else prize*(1/2**(len(guess)-match))</span>
+    <span style="color: #3D7B7B; font-style: italic">#return numbers, match, payout</span>
+
+<span style="color: #3D7B7B; font-style: italic"># examples</span>
+<span style="color: #008000">print</span>( lottery(<span style="color: #666666">52</span>, [<span style="color: #666666">4</span>, <span style="color: #666666">8</span>, <span style="color: #666666">15</span>, <span style="color: #666666">16</span>, <span style="color: #666666">23</span>, <span style="color: #666666">42</span>], <span style="color: #666666">1000000</span>) ) <span style="color: #3D7B7B; font-style: italic"># 2 matching</span>
+<span style="color: #008000">print</span>( lottery(<span style="color: #666666">3</span>, [<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>], <span style="color: #666666">1000000</span>) )               <span style="color: #3D7B7B; font-style: italic"># inevitable perfect match</span>
+<span style="color: #008000">print</span>( lottery(<span style="color: #666666">10000</span>, [<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>], <span style="color: #666666">1000000</span>) )           <span style="color: #3D7B7B; font-style: italic"># zero matching</span>
+</pre></div>
+
+<h4>Your submission:</h4>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lottery</span>(limit, guess, prize):
+    n <span style="color: #666666">=</span> <span style="color: #008000">len</span>(guess)
+    corr <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    l <span style="color: #666666">=</span> guess
+    preis <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    drawnnrs <span style="color: #666666">=</span> []
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(n):
+        j <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #666666">1</span>,limit)
+        <span style="color: #008000; font-weight: bold">if</span> j <span style="color: #AA22FF; font-weight: bold">in</span> l:
+            l<span style="color: #666666">.</span>remove(j)
+            corr <span style="color: #666666">+=1</span>
+            drawnnrs<span style="color: #666666">.</span>append(j)
+    drawnnrs<span style="color: #666666">.</span>sort()
+    <span style="color: #008000; font-weight: bold">if</span> corr <span style="color: #666666">==</span> n:
+        preis <span style="color: #666666">=</span> prize
+
+    <span style="color: #008000; font-weight: bold">elif</span> corr<span style="color: #666666">+1</span> <span style="color: #666666">==</span> n:
+        preis <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>prize
+
+    <span style="color: #008000; font-weight: bold">elif</span> corr <span style="color: #666666">+2</span> <span style="color: #666666">==</span>n:
+        preis <span style="color: #666666">=</span> <span style="color: #666666">0.25*</span>prize
+
+    <span style="color: #008000; font-weight: bold">return</span> drawnnrs, corr, preis
+</pre></div>
+
+<h4>Test results:</h4><ul><li>Correct result for a game with 5 digits ... ERROR</li><li>Based on returned numbers, matches with guess are correct ... ERROR</li><li>Returned numbers are in ascending order ... ERROR</li><li>Length of generated numbers matches length of guess ... ERROR</li><li>Returned numbers contain no duplicates ... ERROR</li><li>Based on returned matches, payout is correct ... ERROR</li><li>Correct result for a single number and no matches ... ERROR</li></ul><h4>Your score: 0 / 21</h4></body></html>

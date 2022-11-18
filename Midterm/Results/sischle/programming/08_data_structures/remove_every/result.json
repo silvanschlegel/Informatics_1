@@ -1,0 +1,17 @@
+{
+    "user": "sischle",
+    "title": "Data structures",
+    "passed": 0,
+    "failed": 7,
+    "points_attainable": 7,
+    "messages": [
+        "Correct result for empty l ... ERROR",
+        "Correct result if list values are of mixed types ... ERROR",
+        "Correct result for n = 1 ... ERROR",
+        "Correct result for n = 10 ... ERROR",
+        "Correct result for n = 2 ... ERROR",
+        "Correct result if n > len(l) ... ERROR",
+        "Correct result if list values are strings ... ERROR"
+    ],
+    "points_achieved": 0
+}

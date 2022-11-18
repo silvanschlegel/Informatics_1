@@ -1,0 +1,13 @@
+{
+    "user": "sischle",
+    "title": "Functions (1)",
+    "passed": 3,
+    "failed": 0,
+    "points_attainable": 6,
+    "messages": [
+        "Correct result if supplying value for only a or both a and b ... ok",
+        "Correct result when calling function without parameters ... ok",
+        "Function signature specifies two parameters ... ok"
+    ],
+    "points_achieved": 6
+}
