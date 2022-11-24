@@ -1,18 +1,21 @@
-# This is a sample Python script.
+from abc import ABC, abstractmethod
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-field = (
-    "--------------",
-    "|            |",
-    "|   ###      |",
-    "|   #        |",
-    "|    #       |",
-    "|            |",
-    "--------------"
-)
+class Animal(ABC):
+    @abstractmethod
+    def hunger(self):
+        pass
 
-s = list(field)
-s[1][1] = " "
+class Dog(Animal,ABC):
+    def hunger(self):
+        pass
+    @abstractmethod
+    def bark(self):
+        print("woof")
 
-print(s)
+class Golden(Dog):
+
+    def hunger(self):
+        return 1
+
+print(Golden.hunger(1))
+
