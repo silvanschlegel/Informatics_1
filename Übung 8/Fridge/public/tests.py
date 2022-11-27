@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from unittest import TestCase
-from public.script import Fridge
+from script import Fridge
 
 
 class PublicTestSuite(TestCase):
@@ -15,6 +15,15 @@ class PublicTestSuite(TestCase):
         self.assertEqual(0, len(f))
         # is it the right item?
         self.assertEqual((191112, "Butter"), item)
+
+    def test_best_before(self):
+        f = Fridge()
+        f.store((221127, "Butter"))
+        f.store((221126, "Melk"))
+        f.store((221130, "Meat"))
+        return_list = f.take_before(221127)
+        expected_list = [(221126, "Melk")]
+        self.assertEqual(expected_list, return_list)
 
     # This current test suite only contains one very basic test case. By now,
     # you have some experience in writing test cases. We strongly ecncourage
