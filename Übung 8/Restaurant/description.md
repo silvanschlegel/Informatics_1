@@ -22,7 +22,7 @@ There are 3 classes in this task: `Restaurant` ,`Order` and `Item`. You only hav
     * `get_restaurant_name` function should return a string carrying the name of the restaurant instance
     * `get_menu_list` function should return the menu (ie. the list of `Item` objects) of the restaurant instance
     * `get_order_list` function should return the string `No order yet` if no orders have been placed in the restaurant instance yet. Otherwise it should return the list of orders placed at the restaurant instance.
-    * `set_order` function should create an `Order` object with the provided list of `Item` objects and should update the order list of the restaurant instance. Only items that can be found in the restaurant menu can be added to an order. Other items provided by the customer should be discard by the function.
+    * `set_order` function should create an `Order` object with the provided list of `Item` objects and should update the order list of the restaurant instance. Only items that can be found in the restaurant menu can be added to an order. Other items provided by the customer should be discarded by the function.
     * `get_revenue` function should return the revenue of the restaurant instance. It is the sum of all order bills placed in the restaurant. If no order has been placed yet, the function should return 0.
 
 - **Order**

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import Restaurant
-from public.item import Item
+from script import Restaurant
+from item import Item
 
 
 class PublicTestSuite(TestCase):
@@ -24,6 +24,27 @@ class PublicTestSuite(TestCase):
         actual = restaurant.get_revenue()
         # Expected return
         expected = 60
+        # Assertion
+        self.assertEqual(actual, expected)
+
+    def test_get_item_list(self):
+        # Create Item Objects with Name and Price
+        steak = Item("Steak", 25)
+        salad = Item("Salad", 10)
+        fish = Item("Fish", 30)
+        pizza = Item("Pizza", 40)
+        # Create menu list
+        menu_list = [steak, salad, fish]
+        # Create order list
+        order_list = [steak, steak, salad, pizza]
+        # Create restaurant object with name and menu list
+        restaurant = Restaurant("Zurich_1", menu_list)
+        # Create an order with the order list
+        restaurant.set_order(order_list)
+        # Get the revenue of the restaurant object
+        actual = restaurant.get_order_list()
+        # Expected return
+        expected = [[steak, steak, salad]]
         # Assertion
         self.assertEqual(actual, expected)
 
