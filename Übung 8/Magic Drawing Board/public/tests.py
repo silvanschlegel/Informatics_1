@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import MagicDrawingBoard
+from script import MagicDrawingBoard
 
 
 class PublicTestSuite(TestCase):
@@ -16,6 +16,18 @@ class PublicTestSuite(TestCase):
                               "001110",
                               "001110"])
         self.assertEqual(expected, actual)
+
+    def test_example1(self):
+        db = MagicDrawingBoard(6, 4)
+        self.assertRaises(Warning, db.pixel, (-1,1))
+
+    def test_example2(self):
+        db = MagicDrawingBoard(6, 4)
+        self.assertRaises(Warning, db.pixel, (6,1))
+
+    def test_example3(self):
+        db = MagicDrawingBoard(6, 4)
+        self.assertRaises(Warning, db.rect, (1,1), (7,2))
 
     # This current test suite only contains one very basic test case. By now,
     # you have some experience in writing test cases. We strongly ecncourage
