@@ -3,9 +3,9 @@
 # The purpose of this file is illustrating the class usages. This script
 # is irrelevant for the grading and you can freely change its contents.
 
-from public.knight import Knight
-from public.mage import Mage
-from public.rogue import Rogue
+from knight import Knight
+from mage import Mage
+from rogue import Rogue
 
 def attack(c1, c2):
     print("{} attacks {} ".format(c1, c2), end="")

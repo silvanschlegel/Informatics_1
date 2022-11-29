@@ -5,7 +5,10 @@
 # class name and stick to the method signatures of Character
 # or the automated grading won't work.
 
-from public.character import Character
+from character import Character
 
-class Rogue:
+class Rogue(Character):
     pass
+
+
+
