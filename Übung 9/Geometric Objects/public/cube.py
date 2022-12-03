@@ -1,18 +1,20 @@
-from public.geometric_object import GeometricObject
+from geometric_object import GeometricObject
 
 
 class Cube(GeometricObject):
     def __init__(self, side_length, color, filled):
-        pass
+        GeometricObject.__init__(self, color, filled)
+        self.__side_length = side_length
 
     def get_side_length(self):
-        pass
+        return self.__side_length
 
     def set_side_length(self, side_length):
+        # self.__side_length = side_length
         pass
 
     def get_area(self):
-        pass
+        return round(6*self.__side_length**2,2)
 
     def get_volume(self):
-        pass
+        return round(self.__side_length**3,2)
