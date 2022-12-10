@@ -6,3 +6,11 @@ echo $SOME_VAR
 
 # Add your terminal commands here. Make sure to first run them
 # locally on your machine to have more detailed error output.
+git clone $REPO_URL repo
+cd repo
+git branch feature_x
+git checkout feature_x
+vim hello.py
+i
+print("Hello World!")
+:ew

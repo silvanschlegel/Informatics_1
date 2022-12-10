@@ -10,7 +10,7 @@ def eprint(*args, **kwargs):
 # Please adopt this variable to test your script with your own repository.
 # Please note that interactive authentication does not work with ACCESS,
 # so please run the script locally.
-YOUR_GIT_REPO_URL="http://use.your.own.repo/url/here"
+YOUR_GIT_REPO_URL="https://github.com/silvanschlegel/repo"
 
 os.chdir("public")
 base_dir = os.getcwd()
