@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import WordLogic
+from script import WordLogic
 
 class PublicTestSuite(TestCase):
 
