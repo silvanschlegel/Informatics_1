@@ -1,23 +1,28 @@
 #!/usr/bin/python3
 
-from public.data import words
+from data import words
 
 def words_with_length(length):
     '''this one just serves as an example'''
     return [word for word in words if len(word) == length]
 
 def words_containing_string(s):
-    pass
+    return [word for word in words if s in word]
 
 def words_starting_with_character(c):
-    pass
+    return [word for word in words if word.startswith(c)]
 
 def alphabet():
     '''you don't have to solve this one using a comprehension.'''
-    pass
+    import string
+    return string.ascii_lowercase
 
 def dictionary():
-    pass
+    return {k: words_starting_with_character(k) for k in alphabet()}
 
 def censored_words(s):
-    pass
+    return [ "x"*len(word) if s in word else word for word in words ]
+
+print(alphabet())
+print(dictionary()["y"])
+print(censored_words("abc"))
