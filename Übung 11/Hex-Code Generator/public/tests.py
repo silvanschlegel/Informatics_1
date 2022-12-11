@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from unittest import TestCase
-from public.script import GameRunner
+from script import GameRunner
 
 
 class PublicTestSuite(TestCase):
