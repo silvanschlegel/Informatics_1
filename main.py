@@ -1,21 +1,8 @@
-from abc import ABC, abstractmethod
+def where_is_waldo(names):
+    for i,j in enumerate(names):
+        if j == "Waldo":
+            return i
+    return None
 
-class Animal(ABC):
-    @abstractmethod
-    def hunger(self):
-        pass
-
-class Dog(Animal,ABC):
-    def hunger(self):
-        pass
-    @abstractmethod
-    def bark(self):
-        print("woof")
-
-class Golden(Dog):
-
-    def hunger(self):
-        return 1
-
-print(Golden.hunger(1))
-
+print( where_is_waldo(["Peter", "Waldo", "John"]) )
+print( where_is_waldo(["Peter", "Willy", "John"]) )
