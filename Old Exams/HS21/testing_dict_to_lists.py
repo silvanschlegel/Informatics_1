@@ -1,4 +1,6 @@
 import unittest
+def dict_to_lists(dict):
+    pass
 
 class MyTestSuite(unittest.TestCase):
     def test_not_list(self):
@@ -10,10 +12,10 @@ class MyTestSuite(unittest.TestCase):
     def test_sorting(self):
         self.assertEqual(dict_to_lists({"b": 1, "a": 2}), (["a", "b"], [2, 1]))
     def test_keys(self):
-        l1,l2 = dict_to_lists({2:"a", 1:"b"}):
+        l1,l2 = dict_to_lists({2:"a", 1:"b"})
         self.assertEqual(l1, [1,2])
     def test_keys(self):
-        l1,l2 = dict_to_lists({2:"a", 1:"b"}):
+        l1,l2 = dict_to_lists({2:"a", 1:"b"})
         self.assertEqual(l2, ["a","a"])
     def test_return_types(self):
         l1, l2 = dict_to_lists({2: "b", 1: "a"})
