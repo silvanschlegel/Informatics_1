@@ -1,0 +1,1 @@
+print(sorted([("a", 2),("b", 1)], key=lambda x: x[1])[0][0] == 'b')
