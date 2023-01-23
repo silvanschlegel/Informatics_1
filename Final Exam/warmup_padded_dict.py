@@ -11,3 +11,8 @@ def padded_dict(keys, values, padding = None):
 
     return res
 
+
+print( padded_dict([1, "b", 3], [55, 66, 77] ) )
+print( padded_dict([1, "b", 3], [55] ) )
+print( padded_dict([1, "b"], [55, 66, 77] ) )
+

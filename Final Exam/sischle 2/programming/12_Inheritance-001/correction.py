@@ -28,6 +28,7 @@ class Container(ABC):
 
 class Wrapper(Container):
     def __init__(self, cookies):
+        super()
         if len(cookies) < 2 or len(cookies) > 5:
             raise ValueError
         self.__cookies = cookies

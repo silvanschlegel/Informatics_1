@@ -6,7 +6,7 @@ class Currency:
 
     def __eq__(self, other):
         if not isinstance(other,Currency):
-            return False
+            return NotImplemented
         if self.__amount*self.__rate == other.__amount*other.__rate:
             return True
         return False
